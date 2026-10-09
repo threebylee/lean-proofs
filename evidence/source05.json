@@ -1,0 +1,28 @@
+{
+  "target": "Bounty.target : Math15.LonelyRunner.Target05",
+  "scope": "Exact original Source05 target with all original hypotheses and k <= 4; complete unbounded reduction and full finite assembly in one freshly checked file.",
+  "lean_version": "Lean (version 4.27.0, arm64-apple-darwin24.6.0, commit db93fe1608548721853390a10cd40580fe7d22ae, Release)",
+  "mathlib_commit": "a3a10db0e9d66acbebf76c5e6a135066525ac900",
+  "main_sha256": "3e536329fd8b667b0c63d79056e5b8329c757d475ea3c819442643d3bb027b67",
+  "payload_sha256": "a8c59c8eef930efa848abc7167b17666d9728ecc337c982245b16ee56e7f8da6",
+  "canonical_source_sha256": "f76ecc7e0b83944e86514c02631e6dbddfbe9585103b09bb3485e1865a868a87",
+  "audited_explicit_declarations": 10517,
+  "original_source_bindings_verified": 411,
+  "target_transitive_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "custom_axioms_or_sorryAx_in_audited_dependencies": false,
+  "verification_scope": "Historical kernel check of the original proof. Published comments were subsequently edited; the edited complete file has not been freshly compiled.",
+  "published_files_sha256": {
+    "CanonicalTarget.lean": "f76ecc7e0b83944e86514c02631e6dbddfbe9585103b09bb3485e1865a868a87",
+    "Main.lean": "17cf7f1219a0e4529214a740e62f6c127bc639ed3db722343bc395138dd81590"
+  },
+  "presentation_review": {
+    "comments_changed": 1187,
+    "outside_comment_bytes_identical": true,
+    "cleaned_payload_sha256": "1369f8ccc435b7a4b34192841c7585391d6aca630920f74434762a998ea8a49b",
+    "fresh_lean_check_of_published_main": false
+  }
+}

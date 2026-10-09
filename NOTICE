@@ -1,0 +1,9 @@
+Lean proofs
+Maintained by threebylee.
+
+The formalizations were developed with assistance from OpenAI Codex.
+Mathematical source attribution is given in each proof directory.
+The problem definitions originate from the Conjectures.io task sources and the Formal Conjectures project.
+The proofs use Mathlib v4.27.0 (Apache License 2.0); Mathlib and Lean are fetched as dependencies, not vendored here.
+Some elementary constructions adapt Mathlib arguments; in-source references are retained.
+Publication does not assert first discovery, first formalization, or bounty eligibility.
