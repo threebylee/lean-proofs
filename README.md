@@ -6,6 +6,7 @@ This repository preserves the arguments and verification evidence without claimi
 | Problem | Proof | Verification |
 | --- | --- | --- |
 | Math 15, Source 5: four-speed amended Lonely Runner spectrum | [Source and instructions](proofs/math15-source05/) | Original exact target checked in Lean 4.27.0; published comment cleanup reviewed, fresh compilation pending |
+| Math 15, Source 10: graceful trees with branching degrees 4 and 3; includes Source 12 | [Source and instructions](proofs/math15-source10/) | Published sources freshly checked in Lean 4.27.0; all 607 transitive axiom audits passed |
 
 Each proof directory is an independent Lake project pinned to Lean 4.27.0 and Mathlib v4.27.0.
 Verification records in [evidence](evidence/) distinguish checked source bytes from later presentation edits.
