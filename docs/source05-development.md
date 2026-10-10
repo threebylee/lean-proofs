@@ -15,7 +15,7 @@ For a finite set of integer speeds $V$, define
 ```math
 L_V(t)=\min_{v\in V}\lVert vt\rVert_{\mathbb R/\mathbb Z},
 \qquad
-\operatorname{ML}(V)=\max_{t\in\mathbb R/\mathbb Z} L_V(t).
+\mathrm{ML}(V)=\max_{t\in\mathbb R/\mathbb Z} L_V(t).
 ```
 
 The time is **shared by all four runners**. Giving each runner a favorable time of its own does not establish a lower bound for $L_V(t)$.
@@ -23,9 +23,9 @@ The time is **shared by all four runners**. Giving each runner a favorable time 
 The hypotheses are that $V$ consists of four distinct positive integers, its collective gcd is 1, and any two distinct speeds have gcd at most 2. The conclusion is
 
 ```math
-\operatorname{ML}(V)\ge \frac14
+\mathrm{ML}(V)\ge \frac14
 \quad\text{or}\quad
-\operatorname{ML}(V)=\frac{s}{4s+k}
+\mathrm{ML}(V)=\frac{s}{4s+k}
 \quad\text{for integers }1\le k\le4,\ k\le s.
 ```
 
@@ -33,7 +33,7 @@ This is a restricted four-speed spectrum theorem. It does not prove every versio
 
 ## A small example that changed the proposed classification
 
-An attractive early conjecture was that every admissible quartet with $\operatorname{ML}<1/4$ would either contain a triple $a,2a,3a$ or belong to the positive family
+An attractive early conjecture was that every admissible quartet with $\mathrm{ML}<1/4$ would either contain a triple $a,2a,3a$ or belong to the positive family
 
 ```math
 \lbrace A,B,A+B,A+2B \rbrace.
@@ -58,7 +58,7 @@ The example also teaches a useful verification habit. A good time proves only a 
 
 ## The architecture of the completed proof
 
-Let $C(V)$ denote the original disjunction about $\operatorname{ML}(V)$. The final assembly uses two theorems:
+Let $C(V)$ denote the original disjunction about $\mathrm{ML}(V)$. The final assembly uses two theorems:
 
 ```math
 \begin{aligned}
@@ -102,7 +102,7 @@ This representation becomes useful only after the proof supplies quantitative in
 
 ### Producing the first short relation
 
-If $\operatorname{ML}(V)<1/4$, the final proof constructs a primitive relation $m$ with
+If $\mathrm{ML}(V)<1/4$, the final proof constructs a primitive relation $m$ with
 
 ```math
 0<\sum_i m_i^2\le16,

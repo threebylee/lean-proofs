@@ -48,7 +48,7 @@ Before investing in a sharper estimate or a more elaborate correspondence, try a
 
 | Saved obstruction | What it rules out | What it does not rule out |
 | --- | --- | --- |
-| $\lbrace 1,3,4,14 \rbrace$ with $\operatorname{ML}=4/17$ | The proposed positive two-family classification of every low quartet | The Source 5 spectrum conclusion |
+| $\lbrace 1,3,4,14 \rbrace$ with $\mathrm{ML}=4/17$ | The proposed positive two-family classification of every low quartet | The Source 5 spectrum conclusion |
 | The eight-edge path with its middle vertex required to have alpha label 1 | That particular prescribed-label construction | Ordinary gracefulness of the path or Source 10 |
 | The $(1,2,2)$ arm configuration under a shortest-arm selection rule | That selection rule as sufficient for the short-arm assembly | A suitable permutation of the same arms |
 
