@@ -1,5 +1,7 @@
 # Math 15 — Sources 10 and 12
 
+For a guided explanation of the constructions, failed shortcuts, and final assembly, read [How the graceful tree proof works](../../docs/source10-development.md).
+
 **Source 10:** every finite tree with exactly two branching vertices, of degrees 4 and 3, admits a graceful labeling. Every other vertex has degree at most 2; all arm lengths are allowed.
 
 A graceful labeling assigns distinct integers from `0` through the number of edges to the vertices so that the absolute differences on edges are exactly `1, 2, ..., |E|`, each once.

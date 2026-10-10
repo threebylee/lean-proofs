@@ -7,6 +7,8 @@ For a finite set of four positive integer speeds with collective gcd 1 and pairw
 
 The exact statement is `Math15.LonelyRunner.Target05` in [CanonicalTarget.lean](CanonicalTarget.lean). The final proof is `Bounty.target` in [Main.lean](Main.lean). It combines an unbounded structural reduction with an exhaustive, kernel-evaluated finite certificate. The file includes all auxiliary proof declarations and certificate data.
 
+For a guided explanation with worked examples, development history, and reusable lessons, read [How the four speed spectrum proof works](../../docs/source05-development.md).
+
 ## Verification
 
 The original full proof was checked with Lean 4.27.0 / Mathlib v4.27.0. Its transitive axioms were only `propext`, `Classical.choice`, and `Quot.sound`, with no `sorryAx` or custom axioms.

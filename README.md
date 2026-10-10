@@ -12,4 +12,12 @@ Each proof directory is an independent Lake project pinned to Lean 4.27.0 and Ma
 Verification records in [evidence](evidence/) distinguish checked source bytes from later presentation edits.
 Website verification, acceptance, and rewards are separate from these local checks.
 
+## Learning from the proofs
+
+The companion guides explain the mathematics, selected failed approaches, and the changes that led to the final proofs. They include worked examples and links to the relevant Lean declarations.
+
+- [How the four speed spectrum proof works](docs/source05-development.md)
+- [How the graceful tree proof works](docs/source10-development.md)
+- [Lessons for future proof work](docs/proof-work-lessons.md)
+
 See [NOTICE](NOTICE) for provenance and attribution. Distributed under the Apache License 2.0.
