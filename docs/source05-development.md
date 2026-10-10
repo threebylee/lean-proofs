@@ -8,12 +8,12 @@ This guide reconstructs the mathematics and selected changes of direction from t
 
 ## The exact question
 
-For a real number $x$, write $\|x\|_{\mathbb R/\mathbb Z}$ for its distance to the nearest integer. Thus $\|0.3\|_{\mathbb R/\mathbb Z}=0.3$ and $\|0.8\|_{\mathbb R/\mathbb Z}=0.2$.
+For a real number $x$, write $\lVert x\rVert_{\mathbb R/\mathbb Z}$ for its distance to the nearest integer. Thus $\lVert 0.3\rVert_{\mathbb R/\mathbb Z}=0.3$ and $\lVert 0.8\rVert_{\mathbb R/\mathbb Z}=0.2$.
 
 For a finite set of integer speeds $V$, define
 
 ```math
-L_V(t)=\min_{v\in V}\|vt\|_{\mathbb R/\mathbb Z},
+L_V(t)=\min_{v\in V}\lVert vt\rVert_{\mathbb R/\mathbb Z},
 \qquad
 \operatorname{ML}(V)=\max_{t\in\mathbb R/\mathbb Z} L_V(t).
 ```
@@ -121,7 +121,7 @@ The next stage constructs a second relation independent of the first. Independen
 For independent integer relations $r,s$, define their squared parallelogram area by
 
 ```math
-A(r,s)=\|r\|_2^2\|s\|_2^2-(r\cdot s)^2>0.
+A(r,s)=\lVert r\rVert_2^2\lVert s\rVert_2^2-(r\cdot s)^2>0.
 ```
 
 The relevant theorem, `native_low_two_relations_target_or_sum_bound`, gives either $C(V)$ or
@@ -130,7 +130,7 @@ The relevant theorem, `native_low_two_relations_target_or_sum_bound`, gives eith
 \left(\sum_i v_i\right)^2<784\,A(r,s).
 ```
 
-The constant has a geometric explanation. The torus argument supplies either the desired spectrum conclusion or a common point with every coordinate at distance at least $2/7$. The margin above $1/4$ is $1/28$. For the actual rank-two lattice, let $D$ be the area of a basic repeating parallelogram. The nearest-line argument bounds the approximation error by $D/(2\|v\|_2)$. Low `ML` forces that error to exceed $1/28$, yielding $\|v\|_2<14D$. The inequality $\sum_i v_i\le2\|v\|_2$ then gives the factor $28^2=784$. The lattice comparison supplies $D^2\le A(r,s)$.
+The constant has a geometric explanation. The torus argument supplies either the desired spectrum conclusion or a common point with every coordinate at distance at least $2/7$. The margin above $1/4$ is $1/28$. For the actual rank-two lattice, let $D$ be the area of a basic repeating parallelogram. The nearest-line argument bounds the approximation error by $D/(2\lVert v\rVert_2)$. Low `ML` forces that error to exceed $1/28$, yielding $\lVert v\rVert_2<14D$. The inequality $\sum_i v_i\le2\lVert v\rVert_2$ then gives the factor $28^2=784$. The lattice comparison supplies $D^2\le A(r,s)$.
 
 All these objects must belong to the same speed vector and the same integer lattice. A good torus point for one plane and an approximation bound for another cannot be combined.
 
