@@ -6,7 +6,7 @@ The following lessons are suggestions for future research. They do not establish
 
 ## Start from what would actually suffice
 
-Source 5 initially pursued a tidy classification of all quartets with small maximum distance. The quartet $\{1,3,4,14\}$ refuted that proposed classification while still satisfying the desired spectrum theorem. The successful assembly only needed “the desired conclusion holds, or the speed sum is at most 444.”
+Source 5 initially pursued a tidy classification of all quartets with small maximum distance. The quartet $\lbrace 1,3,4,14 \rbrace$ refuted that proposed classification while still satisfying the desired spectrum theorem. The successful assembly only needed “the desired conclusion holds, or the speed sum is at most 444.”
 
 Source 10 initially asked too much of a path labeling at a selected vertex. The successful construction allowed different attachment labels and supplied separate cases.
 
@@ -48,7 +48,7 @@ Before investing in a sharper estimate or a more elaborate correspondence, try a
 
 | Saved obstruction | What it rules out | What it does not rule out |
 | --- | --- | --- |
-| $\{1,3,4,14\}$ with $\operatorname{ML}=4/17$ | The proposed positive two-family classification of every low quartet | The Source 5 spectrum conclusion |
+| $\lbrace 1,3,4,14 \rbrace$ with $\operatorname{ML}=4/17$ | The proposed positive two-family classification of every low quartet | The Source 5 spectrum conclusion |
 | The eight-edge path with its middle vertex required to have alpha label 1 | That particular prescribed-label construction | Ordinary gracefulness of the path or Source 10 |
 | The $(1,2,2)$ arm configuration under a shortest-arm selection rule | That selection rule as sufficient for the short-arm assembly | A suitable permutation of the same arms |
 

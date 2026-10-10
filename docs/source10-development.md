@@ -10,18 +10,18 @@ This is an educational reconstruction from the saved development record and form
 
 If a tree has $m$ edges, a graceful labeling is an injective assignment
 
-$$
-f:V\longrightarrow\{0,1,\ldots,m\}
-$$
+```math
+f:V\longrightarrow\lbrace 0,1,\ldots,m \rbrace
+```
 
 such that its edge differences $|f(x)-f(y)|$ are exactly $1,2,\ldots,m$, each once. A tree has $m+1$ vertices, so the vertex labels fill the entire interval as well.
 
 The theorem concerns all finite trees with distinct vertices $u,v$ satisfying
 
-$$
+```math
 \deg(u)=4,\qquad \deg(v)=3,
 \qquad \deg(w)\le2\quad(w\ne u,v).
-$$
+```
 
 It does not claim that all trees are graceful. The definitions `Branch43` and `Target10` are in [Target10.lean](../proofs/math15-source10/Target10.lean), and [OriginalValidator.lean](../proofs/math15-source10/OriginalValidator.lean) preserves the task definitions under a different namespace.
 
@@ -29,9 +29,9 @@ It does not claim that all trees are graceful. The definitions `Branch43` and `T
 
 Every tree in the target consists of three terminal paths at $u$, a path from $u$ to $v$, and two terminal paths at $v$. Denote their positive edge lengths by
 
-$$
+```math
 T(a,b,c;d;e,f).
-$$
+```
 
 ```mermaid
 graph LR
@@ -71,15 +71,15 @@ The old differences of $B$ remain $1,\ldots,m$. The old differences of $A$ becom
 
 If $f(u)\le k$, the precise matching condition is
 
-$$
+```math
 g(v)+k=f(u)+m.
-$$
+```
 
 If $f(u)>k$, it is
 
-$$
+```math
 f(u)=g(v)+k+1.
-$$
+```
 
 These equations concern the vertices actually joined. Existence of a suitable label somewhere else in either component does not suffice. The theorem `join_complete` in [AlphaJoin.lean](../proofs/math15-source10/AlphaJoin.lean) proves the construction, including that the vertex-label intervals remain disjoint and exhaustive.
 
@@ -89,15 +89,15 @@ A related operation, [amalgamation](../proofs/math15-source10/Amalgamation.lean)
 
 Here is one of the reusable constructions already proved in the development. Suppose a complete graceful labeling uses $0,\ldots,m$ and an attachment vertex has label 1. Increase all old labels by 2, so that vertex now has label 3. Attach a path of four new edges, with new vertex labels in order
 
-$$
+```math
 m+4,\quad 0,\quad m+3,\quad 1.
-$$
+```
 
 The four new edge differences are
 
-$$
+```math
 m+1,\quad m+4,\quad m+3,\quad m+2.
-$$
+```
 
 The old edge differences remain $1,\ldots,m$, because translating both endpoints by 2 does not change their difference. The old vertex labels occupy $2,\ldots,m+2$, while the new labels fill the four missing positions. The new endpoint is again labeled 1.
 
@@ -109,9 +109,9 @@ This explains why a finite collection of base cases can support arbitrarily long
 
 A second operation replaces each vertex of a smaller certificate by a matched pair. If its old label is $f(x)$ and the old certificate has $m$ edges, assign the pair the labels
 
-$$
+```math
 2f(x),\qquad 2m+1-2f(x).
-$$
+```
 
 Edges corresponding to old edges join matching sides of the pairs, so their differences are twice the old differences: precisely the even values. The new edges inside pairs supply the odd differences, each exactly once.
 
@@ -156,10 +156,10 @@ The construction supplies a bijection onto the vertices of the original tree and
 
 The complete certificate has $m+1$ vertices and exactly $m$ distinct edges. Through the vertex bijection, $G$ also has $m+1$ vertices. Since $G$ is a tree, it has exactly $m$ edges. Therefore
 
-$$
-F\subseteq G,\qquad \#E(F)=\#E(G)=m
+```math
+F\subseteq G,\qquad \lvert E(F)\rvert=\lvert E(G)\rvert=m
 \quad\Longrightarrow\quad F=G.
-$$
+```
 
 This proves that no graph edges are missing without a separate case-by-case reverse adjacency argument. The theorem is `graceful_of_tree_embedding` in [TreeEmbedding.lean](../proofs/math15-source10/TreeEmbedding.lean).
 

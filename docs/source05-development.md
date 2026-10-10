@@ -12,22 +12,22 @@ For a real number $x$, write $\|x\|_{\mathbb R/\mathbb Z}$ for its distance to t
 
 For a finite set of integer speeds $V$, define
 
-$$
+```math
 L_V(t)=\min_{v\in V}\|vt\|_{\mathbb R/\mathbb Z},
 \qquad
 \operatorname{ML}(V)=\max_{t\in\mathbb R/\mathbb Z} L_V(t).
-$$
+```
 
 The time is **shared by all four runners**. Giving each runner a favorable time of its own does not establish a lower bound for $L_V(t)$.
 
 The hypotheses are that $V$ consists of four distinct positive integers, its collective gcd is 1, and any two distinct speeds have gcd at most 2. The conclusion is
 
-$$
+```math
 \operatorname{ML}(V)\ge \frac14
 \quad\text{or}\quad
 \operatorname{ML}(V)=\frac{s}{4s+k}
 \quad\text{for integers }1\le k\le4,\ k\le s.
-$$
+```
 
 This is a restricted four-speed spectrum theorem. It does not prove every version of the Lonely Runner Conjecture, and it does not discard the gcd hypotheses. The exact definition is `Math15.LonelyRunner.Target05` in [CanonicalTarget.lean](../proofs/math15-source05/CanonicalTarget.lean). That file also proves that the supremum defining `ML` is attained, so the informal use of “maximum” is justified.
 
@@ -35,11 +35,11 @@ This is a restricted four-speed spectrum theorem. It does not prove every versio
 
 An attractive early conjecture was that every admissible quartet with $\operatorname{ML}<1/4$ would either contain a triple $a,2a,3a$ or belong to the positive family
 
-$$
-\{A,B,A+B,A+2B\}.
-$$
+```math
+\lbrace A,B,A+B,A+2B \rbrace.
+```
 
-The quartet $V=\{1,3,4,14\}$ broke that classification. At $t=7/17$, the four distances are
+The quartet $V=\lbrace 1,3,4,14 \rbrace$ broke that classification. At $t=7/17$, the four distances are
 
 | Speed | Fractional part of $vt$ | Distance to the nearest integer |
 | --- | --- | --- |
@@ -60,12 +60,12 @@ The example also teaches a useful verification habit. A good time proves only a 
 
 Let $C(V)$ denote the original disjunction about $\operatorname{ML}(V)$. The final assembly uses two theorems:
 
-$$
+```math
 \begin{aligned}
 \text{Every admissible }V &: \quad C(V)\ \text{or}\ \sum_{v\in V}v\le444,\\
 \text{Every admissible }V\text{ with }\sum_{v\in V}v\le444 &: \quad C(V).
 \end{aligned}
-$$
+```
 
 The first line is an unbounded mathematical reduction. The second is a complete finite closure. Their hypotheses refer to exactly the same speed set.
 
@@ -84,17 +84,17 @@ The number 444 bounds the **sum** of the speeds. A test of a different region, s
 
 Put the speeds in a vector $v=(v_1,v_2,v_3,v_4)$. Their simultaneous positions trace the line
 
-$$
+```math
 t\longmapsto (tv_1,tv_2,tv_3,tv_4)\pmod{\mathbb Z^4}
-$$
+```
 
 in a four-dimensional torus. Here “torus” simply means that each coordinate wraps around modulo 1. A quarter-distance witness is a point of this line whose four coordinates all lie in $[1/4,3/4]$ modulo 1.
 
 An integer relation is a nonzero integer vector $m$ satisfying
 
-$$
+```math
 m\cdot v=0.
-$$
+```
 
 For example, $v_1+v_2=v_3$ gives $m=(1,1,-1,0)$. Such a relation confines the line to a lower-dimensional set. Two independent relations confine it further, allowing the proof to compare the line with a two-dimensional torus.
 
@@ -104,11 +104,11 @@ This representation becomes useful only after the proof supplies quantitative in
 
 If $\operatorname{ML}(V)<1/4$, the final proof constructs a primitive relation $m$ with
 
-$$
+```math
 0<\sum_i m_i^2\le16,
 \qquad
 \sum_i |m_i|\le8.
-$$
+```
 
 “Primitive” means that the gcd of the coefficients is 1. A lattice is a repeating grid of points obtained by taking integer combinations of basis vectors. The construction uses a reduced integer basis, projections, and rounding. Its key comparison is between the all-half point $(1/2,1/2,1/2,1/2)$ and the speed line modulo integer translations. If the line could approximate that point closely enough in all coordinates, it would provide a quarter-distance witness. The assumed failure therefore constrains the reduced basis and yields a short integer normal vector.
 
@@ -120,15 +120,15 @@ The next stage constructs a second relation independent of the first. Independen
 
 For independent integer relations $r,s$, define their squared parallelogram area by
 
-$$
+```math
 A(r,s)=\|r\|_2^2\|s\|_2^2-(r\cdot s)^2>0.
-$$
+```
 
 The relevant theorem, `native_low_two_relations_target_or_sum_bound`, gives either $C(V)$ or
 
-$$
+```math
 \left(\sum_i v_i\right)^2<784\,A(r,s).
-$$
+```
 
 The constant has a geometric explanation. The torus argument supplies either the desired spectrum conclusion or a common point with every coordinate at distance at least $2/7$. The margin above $1/4$ is $1/28$. For the actual rank-two lattice, let $D$ be the area of a basic repeating parallelogram. The nearest-line argument bounds the approximation error by $D/(2\|v\|_2)$. Low `ML` forces that error to exceed $1/28$, yielding $\|v\|_2<14D$. The inequality $\sum_i v_i\le2\|v\|_2$ then gives the factor $28^2=784$. The lattice comparison supplies $D^2\le A(r,s)$.
 
@@ -146,7 +146,7 @@ The bound on $\sum_i|m_i|$ makes the remaining coefficient cases manageable. Wri
 | The remaining sparse $p=5$ case | 193 |
 | $p=7$ | 429 |
 
-For odd $p$, positivity, four distinct speeds, and the relation equation exclude $p=1$; the upper bound 8 leaves 3, 5, and 7. The sparse case forces actual speeds $2q,3q$ with $q\in\{1,2\}$, where a separate analytic reduction applies. The largest remaining bound is 444.
+For odd $p$, positivity, four distinct speeds, and the relation equation exclude $p=1$; the upper bound 8 leaves 3, 5, and 7. The sparse case forces actual speeds $2q,3q$ with $q\in\lbrace 1,2 \rbrace$, where a separate analytic reduction applies. The largest remaining bound is 444.
 
 These are the cases in `low_small_relation_target_or_sum444`. They use the short relation actually constructed by the proof; this stage does not assume that it minimizes the coefficient sum among all relations.
 
@@ -204,7 +204,7 @@ The self-contained [Main.lean](../proofs/math15-source05/Main.lean) is large bec
 
 **Separate certificate soundness from coverage.** Correct answers for the listed inputs do not prove that all required inputs were listed. Both facts are part of this proof.
 
-**Preserve useful counterexamples.** The quartet $\{1,3,4,14\}$ is a compact test for any later attempt to reuse the rejected classification.
+**Preserve useful counterexamples.** The quartet $\lbrace 1,3,4,14 \rbrace$ is a compact test for any later attempt to reuse the rejected classification.
 
 Questions for practice: Why does the time $7/17$ alone not prove an exact maximum? Where does the factor 784 enter? What would break if masks combined favorable times independently for different runners? The sections above give the corresponding arguments.
 
